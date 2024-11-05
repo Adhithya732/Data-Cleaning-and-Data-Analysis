@@ -51,11 +51,11 @@ print(data.dtypes)
 # 6. Final cleaned data
 print("\nCleaned data preview:")
 print(data.head())
-~~
+~~~
 ![Screenshot 2024-11-05 155342](https://github.com/user-attachments/assets/f92a982c-12b0-4953-ae2a-48aada423ecb)
 
 Boxplot
-~~
+~~~
 import seaborn as sns
 import matplotlib.pyplot as plt
 
