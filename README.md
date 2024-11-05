@@ -1,6 +1,4 @@
 # Data-Cleaning-and-Data-Analysis
-# Workshop
-Data Cleaning and Data Analysis
 
 # AIM
 To read the given perform data cleaning and data analysis.
@@ -17,7 +15,7 @@ To read the given perform data cleaning and data analysis.
 5.Implement DistPlot method for multivariate analysis
 
 # Coding and Output
-# Data cleaning process 
+## Data cleaning process 
 ~~~
 # @title Default title text
 import pandas as pd
@@ -54,8 +52,8 @@ print("\nCleaned data preview:")
 print(data.head())
 ~~~
 ![Screenshot 2024-11-05 155342](https://github.com/user-attachments/assets/f92a982c-12b0-4953-ae2a-48aada423ecb)
-
-#Boxplot
+~~~~~~
+##Boxplot
 ~~~
 import seaborn as sns
 import matplotlib.pyplot as plt
