@@ -18,37 +18,24 @@ To read the given perform data cleaning and data analysis.
 
 Data cleaning process 
 ~~~
-# @title Default title text
 import pandas as pd
-
-# Load your dataset
 data = pd.read_csv('supermarket.csv')
 
-# 1. Checking for missing values
 print("Missing values in each column:")
 print(data.isnull().sum())
 
-# 2. Checking for duplicate rows
 duplicate_rows = data.duplicated().sum()
 print(f"\nNumber of duplicate rows: {duplicate_rows}")
 
-# If duplicates exist, remove them
 if duplicate_rows > 0:
     data = data.drop_duplicates()
-
-# 3. Convert 'Date' column to datetime format if necessary
 if data['Date'].dtype == 'object':
     data['Date'] = pd.to_datetime(data['Date'], format='%m/%d/%Y')
 
-# 4. Drop unnecessary columns (if any, such as redundant IDs)
-# Assuming 'Invoice ID' is not needed for analysis
 data = data.drop(columns=['Invoice ID'], axis=1)
-
-# 5. Checking data types after conversion
 print("\nData types after cleaning:")
 print(data.dtypes)
 
-# 6. Final cleaned data
 print("\nCleaned data preview:")
 print(data.head())
 ~~~
@@ -110,7 +97,6 @@ print(data.shape)
 Count plot method
 
 ~~~
-# Count plot for categorical variables
 plt.figure(figsize=(8, 6))
 sns.countplot(data=data, x='Product line')
 plt.title('Count of Product Line')
@@ -123,7 +109,6 @@ plt.show()
 DistPlot method
 
 ~~~
-# Distplot for multivariate analysis between 'Total' and 'Rating'
 sns.jointplot(x=data['Total'], y=data['Rating'], kind='scatter')
 plt.title('Total vs Rating')
 plt.show()
