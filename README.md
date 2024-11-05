@@ -17,6 +17,7 @@ To read the given perform data cleaning and data analysis.
 5.Implement DistPlot method for multivariate analysis
 
 # Coding and Output
+# Data cleaning process 
 ~~~
 # @title Default title text
 import pandas as pd
@@ -54,6 +55,7 @@ print(data.head())
 ~~~
 ![Screenshot 2024-11-05 155342](https://github.com/user-attachments/assets/f92a982c-12b0-4953-ae2a-48aada423ecb)
 
+#Boxplot
 ~~~
 import seaborn as sns
 import matplotlib.pyplot as plt
@@ -79,6 +81,7 @@ plt.show()
 ~~~
 ![Screenshot 2024-11-05 153754](https://github.com/user-attachments/assets/5a795da6-1a9f-40db-9a3c-5bcc972e51e3)
 
+#IQR method
 ~~~
 import pandas as pd
 
@@ -104,6 +107,7 @@ print(data.shape)
 ~~~
 ![Screenshot 2024-11-05 153921](https://github.com/user-attachments/assets/8aea8342-9cf2-4da3-aafb-2702f6552f61)
 
+#Count plot method
 ~~~
 # Count plot for categorical variables
 plt.figure(figsize=(8, 6))
@@ -115,6 +119,7 @@ plt.show()
 ~~~
 ![Screenshot 2024-11-05 153828](https://github.com/user-attachments/assets/17f6d784-085b-4901-8a12-32631d220057)
 
+#DistPlot method
 ~~~
 # Distplot for multivariate analysis between 'Total' and 'Rating'
 sns.jointplot(x=data['Total'], y=data['Rating'], kind='scatter')
